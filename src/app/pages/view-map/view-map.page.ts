@@ -11,6 +11,7 @@ export class ViewMapPage implements OnInit {
   constructor(public mapService: MapServiceService, public router: Router) {}
 
   ngOnInit() {
+    console.log(this.mapService.location);
     this.mapService.createMap();
   }
   handleDismissMap = async () => {
