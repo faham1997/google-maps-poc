@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'add-map',
+    loadChildren: () => import('./pages/add-map/add-map.module').then( m => m.AddMapPageModule)
+  },
+  {
+    path: 'view-map',
+    loadChildren: () => import('./pages/view-map/view-map.module').then( m => m.ViewMapPageModule)
+  },
 ];
 
 @NgModule({
