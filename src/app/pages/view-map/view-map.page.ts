@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MapServiceService } from 'src/app/services/map-service.service';
 
 @Component({
   selector: 'app-view-map',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-map.page.scss'],
 })
 export class ViewMapPage implements OnInit {
-
-  constructor() { }
+  constructor(public mapService: MapServiceService, public router: Router) {}
 
   ngOnInit() {
+    this.mapService.createMap();
   }
-
+  handleDismissMap = async () => {
+    // await this.mapService.destroyMap();
+    this.router.navigate(['/home']);
+  };
 }

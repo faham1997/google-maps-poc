@@ -1,9 +1,12 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>view-map</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
+<ion-content [fullscreen]="true">
+  <ion-header [translucent]="true" class="ion-no-border" slot="fixed">
+    <ion-toolbar>
+      <ion-icon
+        class="back"
+        name="arrow-back-circle"
+        (click)="handleDismissMap()"
+      ></ion-icon>
+    </ion-toolbar>
+  </ion-header>
+  <div class="full" id="map"></div>
 </ion-content>
