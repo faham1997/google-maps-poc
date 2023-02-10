@@ -4,25 +4,21 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "skipLibCheck": true,
     "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
     "importHelpers": true,
+    "resolveJsonModule": true,
+    "downlevelIteration": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
     "target": "es2015",
     "module": "es2020",
-    "lib": [
-      "es2018", 
-      "dom"
-    ],
-    "useDefineForClassFields": false
+    "lib": ["es2018", "dom"],
+    "allowSyntheticDefaultImports": true,        
+    "typeRoots": [
+      "node_modules/@types",
+  ],
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
